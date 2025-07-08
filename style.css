@@ -105,6 +105,7 @@ RESULT SECTION (AFTER DATA FETCH)
 #pokemon-img {
     width: 300px;
     height: auto;
+    padding: 32px;
 }
 
 #pokemon-text {
