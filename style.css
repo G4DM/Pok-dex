@@ -1,0 +1,137 @@
+/* 
+==========================
+        BODY STYLE
+==========================
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 90vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url("./img/background.jpg");
+	background-repeat: repeat;
+	background-size: auto; /* O puedes poner un tamaño fijo si quieres controlar el tile */
+	animation: moverFondo 60s linear infinite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 
+==========================
+   MENU/SEARCH CONTAINERS
+==========================
+*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 12px;
+	padding: 28px 64px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra ligera para más "flotante" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#h1-title {
+    font-size: 3rem;
+}
+
+#search-bar {
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+    transition: border 0.2s ease;
+}
+
+#search-bar:focus {
+    outline: 1px solid hsl(34, 78%, 70%);
+}
+
+#search-btn {
+    font-size: 1.5rem;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(34, 78%, 80%);
+    transition:
+        transform 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+}
+
+#search-btn:hover {
+    transform: scale(1.1);
+    background-color: hsl(34, 78%, 70%);
+}
+
+#search-btn:active {
+    transform: scale(1.03);
+    background-color: hsl(34, 78%, 50%);
+    transition:
+        transform 0.05s ease-in-out,
+        background-color 0.05s ease-in-out;
+}
+
+/* 
+==========================
+RESULT SECTION (AFTER DATA FETCH)
+==========================
+*/
+
+
+#result {
+    display: none;
+    background-color: white;
+    margin-left: 64px;
+    padding: 32px 0px 0px 0px;
+    border: 4px solid black;
+    border-radius: 32px;
+}
+
+#pokemon-img {
+    width: 300px;
+    height: auto;
+}
+
+#pokemon-text {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    background-color: tomato;
+    border-top: 1px solid;
+    border-bottom-left-radius: 29px;
+    border-bottom-right-radius: 29px;
+    padding: 16px;
+    margin: 0;
+}
+
+/* 
+==========================
+    BACKGROUND ANIMATION
+==========================
+*/
+
+
+@keyframes moverFondo {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -1280px -960px;
+	}
+}
